@@ -1,0 +1,1 @@
+Manage Gather projects in QGIS
