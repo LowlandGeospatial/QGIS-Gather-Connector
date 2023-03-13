@@ -126,6 +126,11 @@ class GatherCloud:
         self.project_list = []
 
     def fetch_project_list(self):
+        """
+        lists Gather projects available to user
+
+        @return: [projects]
+        """
         headers = {
             'email': self.email,
             'password': self.password
@@ -135,7 +140,12 @@ class GatherCloud:
         return self.project_list
 
     def fetch_project(self, selected_project):
-        # fetch selected project
+        """
+        Fetches project geojson
+
+        @param selected_project: Project to fetch
+        @return: project geojson
+        """
         id = [p['id'] for p in self.project_list if p['name'] == selected_project][0]
         res = Fetch.request(
             host=HOST,
@@ -150,6 +160,13 @@ class GatherCloud:
         return project_data
 
     def download_project_files(self, selected_project, folder):
+        """
+        Downloads files associated with features in a project
+
+        @param selected_project: project name
+        @param folder: download path
+        @return: Success/Fail Message
+        """
         # get project
         if not folder:
             return Message("Error", "Project folder doesn't exist!", Qgis.Warning)
@@ -179,12 +196,28 @@ class GatherCloud:
         return Message("Success", f"{str(fc)} files downloaded", Qgis.Success)
 
     def download_project(self, selected_project, dwnld_path):
+        """
+        Downloads a project as geojson
+
+        @param selected_project: project name
+        @param dwnld_path: path to geojson file
+        @return: (project name, download path)
+        """
         project_data = self.fetch_project(selected_project)
         with open(dwnld_path, 'w') as f:
             json.dump(project_data, f)
         return selected_project, dwnld_path
 
     def add_fc_to_project(self, project_name, layer_name, project_id, fc):
+        """
+        Adds a featureclass to a project
+
+        @param project_name: project to which you wish to add a layer
+        @param layer_name: name of layer to add
+        @param project_id: id of project to add layer to
+        @param fc: geojson featureclass of the layer being added
+        @return: Success/fail Message
+        """
         try:
             payload = json.dumps({"name": layer_name, "geojson": fc})
             res = Fetch.request(verb="POST", host=HOST, url=FEATURE_URL + project_id, payload=payload, headers={
