@@ -5,8 +5,8 @@
 [general]
 name=Gather Connector
 qgisMinimumVersion=3.0
-description=Manage Gather projects. Find out more: www.lowlandgeospatial/gather
-version=0.3
+description=Manage Gather projects. Find out more: www.lowlandgeospatial.com/gather
+version=0.5
 author=Lowland Geospatial
 email=info@LowlandGeospatial.solutions
 
