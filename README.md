@@ -23,4 +23,4 @@ Manage Gather projects in QGIS
 	Plugins > Manage and Install Plugins > Search "Gather Connector" > Install Plugin
 	```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about">back to top</a>)</p>
