@@ -6,7 +6,7 @@
 name=Gather Connector
 qgisMinimumVersion=3.0
 description=Manage Gather projects. Find out more: www.lowlandgeospatial.com/gather
-version=0.5
+version=0.6
 author=Lowland Geospatial
 email=info@LowlandGeospatial.solutions
 
@@ -29,7 +29,7 @@ homepage=https://www.lowlandgeospatial.com/Gather
 category=Plugins
 icon=icon.png
 # experimental flag
-experimental=True
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
