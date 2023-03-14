@@ -183,8 +183,8 @@ class GatherCloud:
                     host=HOST,
                     url=GET_FILE_URL + file['name'],
                     headers={
-                        'email': self.email(),
-                        'password': self.password()
+                        'email': self.email,
+                        'password': self.password
                     }
                 )
                 data = res.read()
