@@ -175,16 +175,16 @@ class GatherCloud:
         project_data = self.fetch_project(selected_project)
         fc = 0
         for feature in project_data['features']:
-            if "file" not in feature['properties']:
+            if "files" not in feature['properties']:
                 continue
-            for file in feature['properties']['file']:
+            for file in feature['properties']['files']:
                 fc += 1
                 res = Fetch.request(
                     host=HOST,
                     url=GET_FILE_URL + file['name'],
                     headers={
-                        'email': self.email(),
-                        'password': self.password()
+                        'email': self.email,
+                        'password': self.password
                     }
                 )
                 data = res.read()
