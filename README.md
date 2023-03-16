@@ -24,7 +24,7 @@ Manage Gather projects in QGIS
    ```
 2. Run tests
    ```OSGeo4W 
-   %PYTHONHOM%/python.exe C:/path/to/QGIS-Gather-Connector/test_connect.py
+   %PYTHONHOME%/python.exe C:/path/to/QGIS-Gather-Connector/test_connect.py
    ```
 
 #### prod
