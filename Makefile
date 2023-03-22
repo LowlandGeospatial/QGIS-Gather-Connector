@@ -3,8 +3,7 @@
 #
 # Manage Gather projects
 #							 -------------------
-#		begin				: 2023-01-23
-#		git sha				: $Format:%H$
+#		date				: 2023-01-23
 #		copyright			: (C) 2023 by Lowland Geospatial
 #		email				: lowland@mail.com
 # ***************************************************************************/
