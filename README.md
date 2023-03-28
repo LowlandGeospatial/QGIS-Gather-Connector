@@ -1,10 +1,21 @@
-### About
+# Gather connector
 
-Manage Gather projects in QGIS
+Manage [fieldwork conducted with Gather](https://www.lowlandgeospatial.com/gather) using  [QGIS Desktop](https://www.qgis.org/en/site/)  via the **Gather Connector Plugin.**
 
-### Installation
+* **Add layers to projects for access in the field**, automatically generate forms from attribute tables. _Add an area of interest (red line boundary) for a survey_.
+* **Load projects from your mobile devices**, with real-time access to all features, photos and files. _Begin analysing data as soon as your surveyor logs a feature_.
 
-#### dev
+
+_Rather be in the field than at your desk? Contact [Lowland Geospatial](mailto:info@lowlandgeospatial.solutions)_.
+
+
+## Installation
+
+### Production
+1. Via QGIS
+	```qgis
+	Plugins > Manage and Install Plugins > Search "Gather Connector" > Install Plugin
+### Development
 
 1. Open plugins folder via QGIS
    ```qgis
@@ -14,24 +25,18 @@ Manage Gather projects in QGIS
    ```sh
    git clone https://github.com/TheFunEmbargo/QGIS-Gather-Connector.git
    ```
-3. Restart QGIS
+3. _Restart QGIS_
 
-##### tests
 
-1. Open Shell
+4. Open Shell
    ```OSGeo4W 
    Start > OSGeo4W Shell
    ```
-2. Run tests
+5. Run tests
    ```OSGeo4W 
    %PYTHONHOME%/python.exe C:/path/to/QGIS-Gather-Connector/test_connect.py
    ```
 
-#### prod
+## License
 
-1. via QGIS
-	```qgis
-	Plugins > Manage and Install Plugins > Search "Gather Connector" > Install Plugin
-	```
-
-<p align="right">(<a href="#about">back to top</a>)</p>
+[GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
