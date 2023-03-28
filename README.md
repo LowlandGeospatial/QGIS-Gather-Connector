@@ -23,7 +23,7 @@ _Rather be in the field than at your desk? Contact [Lowland Geospatial](mailto:i
    ```
 2. Clone the repo
    ```sh
-   git clone https://github.com/TheFunEmbargo/QGIS-Gather-Connector.git
+   git clone https://github.com/LowlandGeospatial/QGIS-Gather-Connector.git
    ```
 3. _Restart QGIS_
 
